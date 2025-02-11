@@ -9,3 +9,8 @@ From:\s+<(?P<from_id>.*)>\s+To
 | makeresults 
 | eval text="alice;search;saved_search" 
 | rex field=text "(?P<username>.*);(?P<app_name>.*);(?P<savedsearch>.*)"
+
+
+| makeresults 
+| eval credit_card_number = "1234-5678-9101-1213" 
+| rex field=credit_card_number "(?P<digit>\d{4})" max_match=0
