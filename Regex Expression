@@ -4,3 +4,8 @@ From:\s+<(?P<from_id>.*)>\s+To
 | makeresults 
 | eval text="alice;search;saved_search" 
 | rex field=text "(?P<username>\w+);(?P<app_name>\w+);(?P<savedsearch>\w+)"
+
+
+| makeresults 
+| eval text="alice;search;saved_search" 
+| rex field=text "(?P<username>.*);(?P<app_name>.*);(?P<savedsearch>.*)"
